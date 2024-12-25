@@ -1,0 +1,125 @@
+.theme-toggle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.theme-toggle-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.theme-status {
+  margin-right: 15px;
+
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+
+.theme-toggle-input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+.theme-toggle-slider {
+  width: 60px;
+  height: 30px;
+  border-radius: 50px;
+  position: relative;
+
+  background-color: #ccc;
+}
+
+.theme-toggle-slider::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+}
+
+.theme-toggle-slider::after {
+  content: '';
+  position: absolute;
+  top: 7px;
+  left: 40px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+}
+
+.theme-toggle-input:checked + .theme-toggle-slider {
+  background-color: #333;
+}
+
+.theme-toggle-input:checked + .theme-toggle-slider::before {
+  transform: translateX(30px);
+}
+
+.theme-toggle-input:checked + .theme-toggle-slider::after {
+  transform: translateX(-30px);
+}
+
+.theme-status-text {
+  margin-top: 10px;
+  
+  font-size: 1rem;
+  text-align: center;
+  
+  color: inherit; 
+}
+
+body.dark-mode {
+  color: white;
+  background-color: #121212; 
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .theme-toggle-slider,
+  .theme-toggle-slider::before,
+  .theme-toggle-slider::after,
+  .theme-toggle-input:checked + .theme-toggle-slider::before,
+  .theme-toggle-input:checked + .theme-toggle-slider::after {
+    transition: none; 
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .theme-toggle-slider {
+    transition: background-color 0.3s ease;
+  }
+
+  .theme-toggle-slider::before {
+    transition: transform 0.3s ease;
+  }
+
+  .theme-toggle-slider::after {
+    transition: transform 0.3s ease;
+  }
+
+  .theme-toggle-input:checked + .theme-toggle-slider {
+    transition: background-color 0.3s ease;
+  }
+
+  .theme-toggle-input:checked + .theme-toggle-slider::before {
+    transition: transform 0.3s ease;
+  }
+
+  .theme-toggle-input:checked + .theme-toggle-slider::after {
+    transition: transform 0.3s ease;
+  }
+}

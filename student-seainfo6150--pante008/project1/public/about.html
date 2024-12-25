@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Dog's World</title>
+    <style>
+      
+        :root {
+          --primary-color: white;
+          --navbar-menu-color: #34495E;
+          --header-footer-background-color: #2C3E50;
+          --card-border-color: #ccc;
+          --card-background-color: #fff;
+          --para-background-color: #666;
+          --body-text-color: #333;
+          --header-more-information-background-color: #ECF0F1;
+          --border-bottom-color: #E74C3C;
+         
+        }
+
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+
+        body {
+          font-family: Arial, sans-serif;
+          line-height: 1.6;
+
+          color: var(--body-text-color);
+          background-color: var(--body-background-color);
+        }
+
+        header {
+          margin-bottom: 30px;
+          padding: 1.5rem;
+
+          text-align: center;
+
+          background-color: var(--header-footer-background-color);
+          color: var(--primary-color);
+          border-bottom: 4px solid var(--border-bottom-color);
+        }
+
+        header h1 {
+          margin-bottom: 0.5rem;
+
+          font-size: 2.5rem;
+        }
+
+        header p {
+          font-size: 1.2rem;
+
+          color: var(--header-more-information-background-color);
+        }
+
+        .logo-image {
+          width: 120px;
+          height: auto;
+          margin: 20px 0;
+        }
+
+        .navbar {
+          padding: 10px;
+
+          background-color: var(--navbar-menu-color);
+        }
+
+        .nav-menu {
+          list-style: none;
+          display: flex;
+          justify-content: center;
+        }
+
+        .nav-item {
+          position: relative;
+        }
+
+        .nav-link {
+          padding: 10px 20px;
+          display: block;
+
+          color: var(--primary-color);
+
+          text-decoration: none;
+          transition: background-color 0.3s ease;
+        }
+
+        .nav-link:hover {
+          background-color: var(--border-bottom-color);
+        }
+
+        .dropdown-menu {
+          margin-top: 10px;
+        
+          background-color: var(--navbar-menu-color);
+          border: 1px solid var(--border-bottom-color);
+         
+          position: absolute; 
+          list-style: none;
+          opacity: 0;
+          visibility: hidden;
+          transition: opacity 0.5s ease, visibility 1s ease;
+        }
+
+        .dropdown-menu li a {
+          padding: 10px;
+          display: block;
+
+          text-decoration: none;
+
+          color: var(--primary-color);
+        }
+
+        .dropdown-menu li a:hover {
+          background-color: var(--border-bottom-color);
+        }
+
+        .nav-item:hover .dropdown-menu {
+          opacity: 1;
+          visibility: visible;
+        }
+
+        section {
+          padding: 20px;
+          border-radius: 8px;
+          margin-bottom: 30px;
+
+          border: 1px solid var(--card-border-color);
+          background-color: var(--card-background-color);
+
+
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          transition: box-shadow 0.3s ease;
+        }
+
+        section:hover {
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2)
+        section h1 {
+          margin-bottom: 15px;
+           
+          font-size: 2rem;
+
+          color: var(--header-footer-background-color);
+        }
+
+        section p {
+          margin-bottom: 15px;
+
+          font-size: 1.1rem;
+
+          color: var(--para-background-color) ;
+        }
+
+        section p:last-child {
+          margin-bottom: 0;
+        }
+
+        footer {
+          padding: 20px 0;
+          margin-top: 40px;
+
+          text-align: center;
+
+          background-color: var(--header-footer-background-color);
+          color: var(--primary-color);
+          border-top: 4px solid var(--border-bottom-color);
+        }
+
+        footer p {
+          margin-bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>About Us - Dog's World</h1>
+        <p>Discover the fascinating world of dogs with us</p>
+        <a href="index.html" aria-label="Go to HomePage of Dogs World"><img src="photo.avif" alt="Logo to World of Dogs which is an image of a running dog" class="logo-image"></a>
+        <nav class="navbar" aria-label="Main Navigation">
+            <ul class="nav-menu">
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link" aria-haspopup="true" aria-expanded="false">Menu</a>
+                    <ul class="dropdown-menu" aria-label="Sub Navigation">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="register.html">Register</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link" aria-haspopup="true" aria-expanded="false">External Links</a>
+                    <ul class="dropdown-menu" aria-label="Sub Navigation">
+                        <li><a href="dogfeatures.html">Dog's Features</a></li>
+                        <li><a href="dogfoodhabits.html">Dog's Food Habits</a></li>
+                        <li><a href="dogbehavior.html">Dog's Behavior</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section role="region" aria-labelledby="about-us-heading">
+            <h1>About Us</h1>
+            <p>
+                Welcome to Dog’s World! This site is dedicated to our furry friends and the bonds they share with us. It features a lot of interesting facts, stories, and resources to share with you. Whether you are a dog lover or an owner, we’ll have something for you.
+            </p>
+            <p>
+                You’ll find engaging content such as fun dog trivia and health tips to help you understand and appreciate your dog even more. Stay connected to read about dog training, nutrition, and behavior as our new sections.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum congue, turpis a varius tincidunt, mauris nunc luctus arcu, sed tincidunt lorem erat nec magna. Curabitur vel velit at magna fermentum facilisis. Donec tincidunt enim vitae velit porttitor, vel malesuada est pulvinar.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 All About Dogs. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

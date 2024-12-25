@@ -1,0 +1,43 @@
+.buy-me-coffee {
+  text-align: center;
+  margin: 50px auto;
+  padding: 20px;
+  border: 2px solid #ffdd00; 
+  border-radius: 10px;
+  max-width: 400px;
+  background-color: #fffbea; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.buy-me-coffee h1 {
+  font-family: 'Arial', sans-serif;
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.buy-me-coffee a {
+  text-decoration: none;
+}
+
+.buy-me-coffee button {
+  font-family: 'Arial', sans-serif;
+  font-size: 1.2rem;
+  color: #ffffff;
+  background-color: #ff813f; 
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.buy-me-coffee button:hover {
+  background-color: #e06b30; 
+  transform: scale(1.05);
+}
+
+.buy-me-coffee button:focus {
+  outline: 3px solid #ffdd00; 
+  outline-offset: 3px;
+}

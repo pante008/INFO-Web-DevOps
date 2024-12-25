@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Menu with UI Cards</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <h1>Let's Travel!</h1>
+        <nav>
+            <button id="menu-button" class="menu-button" aria-expanded="false" aria-controls="dropdown-menu">
+                Menu
+            </button>
+            <ul id="dropdown-menu" class="dropdown-menu hidden">
+                <li><a href="page1.html">Flights</a></li>
+                <li><a href="page2.html">Hotels</a></li>
+                <li><a href="page3.html">Landmarks</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main-content">
+        <section class="card">
+            <h2>United States of America</h2>
+            <p>Popular Destinations: New York, London, Los Angeles</p>
+        </section>
+        <section class="card">
+            <h2>Europe</h2>
+            <p>Popular Destinations: Paris, Berlin, Rome</p>
+        </section>
+        <section class="card">
+            <h2>Asia</h2>
+            <p>Popular Destinations: Shanghai, Bangkok, Tokyo</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2024 My Webpage</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

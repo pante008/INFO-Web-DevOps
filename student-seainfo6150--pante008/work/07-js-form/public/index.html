@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Registration Form</h1>
+    </header>
+
+    <main>
+        <form id="registration-form" action="/register" method="POST">
+            <div class="form-group">
+                <label for="name">Name <span class="required">* Required</span></label>
+                <input type="text" id="name" name="name" aria-required="true">
+                <p class="err-message" id="name-error"></p>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Id<span class="required">* Required</span></label>
+                <input type="text" id="email" name="email" aria-required="true">
+                <p class="err-message" id="email-error"></p>
+            </div>
+
+            <div class="form-group">
+                <label for="confirmation-email">Confirm Above Email <span class="required">* Required</span></label>
+                <input type="text" id="confirmation-email" name="confirmation-email" aria-required="true">
+                <p class="err-message" id="confirmation-email-error"></p>
+            </div>
+
+            <div class="form-group">
+                <label for="wants-spam">Do you want to receive spam emails?</label>
+                <input type="checkbox" id="wants-spam" name="wants-spam">
+            </div>
+
+            <div class="form-group">
+                <label for="tier">Choose a tier</label>
+                <select id="tier" name="tier">
+                    <option value="Bronze">Bronze</option>
+                    <option value="silver">Silver</option>
+                    <option value="gold">Gold</option>
+                </select>
+            </div>
+
+            <button type="submit">Register</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>© 2024</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

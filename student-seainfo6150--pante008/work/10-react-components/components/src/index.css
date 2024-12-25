@@ -1,0 +1,101 @@
+:root {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+header {
+  margin-bottom: 2rem;
+}
+
+nav button {
+  margin: 0 0.5rem;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.button {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.button.link {
+  background: none;
+  border: none;
+  color: blue;
+  text-decoration: underline;
+}
+
+.button.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+}
+
+.button.button:hover {
+  background-color: #45a049;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.card {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  width: 200px;
+}
+
+.panel {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.panel-text, .panel-image {
+  flex: 1;
+}
+
+.panel-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+footer {
+  margin-top: 2rem;
+}
+
+dialog {
+  padding: 1rem;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}

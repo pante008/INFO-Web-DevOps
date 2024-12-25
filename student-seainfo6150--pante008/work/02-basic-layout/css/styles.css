@@ -1,0 +1,86 @@
+:root {
+    --primary-color: plum;
+    --secondary-color: pink;
+    --hover-background-color: rebeccapurple;
+    --hover-text-color: white;
+    --menu-background-color: black;
+    --menu-hover-color: plum;  
+    --menu-padding: 1rem;
+    --menu-item-margin: 1rem;
+  }
+  
+  #homepage {
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "header header"
+      "localmenu main"
+      "footer footer";
+  }
+  
+  header {
+    grid-area: header;
+  }
+  
+  .primary-nav {
+    background-color: var(--primary-color);
+  }
+  
+  .primary-nav ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    margin: 0rem;
+  }
+  
+  .local-menu {
+    display: grid;
+    background-color: var(--secondary-color); 
+    grid-area: localmenu;
+    border-right: 1px solid var(--menu-background-color);
+  }
+  
+  .local-menu ul {
+    margin: 0rem;
+  }
+  
+  .local-menu li {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    list-style-type: none;
+    margin-top: var(--menu-item-margin); 
+  }
+  
+  main {
+    grid-area: main;
+    background-color: var(--secondary-color); 
+    padding: 0.5rem;
+  }
+  
+  footer {
+    grid-area: footer;
+    background-color: var(--primary-color); 
+    padding: 1rem;
+  }
+  
+  .menu > li {
+    padding: var(--menu-padding); 
+  }
+  
+  .menu > li a {
+    display: block; 
+    padding: 1rem; 
+    text-decoration: none; 
+    color: inherit; 
+  }
+  
+  .menu > li:hover a {
+    color: var(--hover-text-color); 
+    background-color: var(--hover-background-color); 
+  }
+  
+  .local-menu li:hover {
+    background-color: var(--menu-hover-color); 
+  }
+  

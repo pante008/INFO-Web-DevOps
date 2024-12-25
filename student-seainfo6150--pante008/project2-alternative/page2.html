@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn More on Cats</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="page2.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-title">
+                <a href="index.html" aria-label="Home"><img src="cat-image.jpg" alt="Image of cat looking at you directly" class="logoimage"></a>
+                <h1>Learn More on Cats</h1>
+            </div>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        </ul>
+        <div class="login-hamburger right">
+            <button id="login-button" class="open link-button">Log In</button>
+            <dialog class="modal">
+                <span class="close">&times;</span>
+                <form class="register" id="login-form" action="/login" method="POST">
+                    <label class="register__label">
+                        <span class="register__name-label">Username <i>* Required</i></span><br>
+                        <input type="text"  id = "username" name="username" class="register__name" required><br>
+                        <div class="msg_name"></div>
+                    </label>
+                    <br>
+                    <label class="register__label">
+                        <span class="register__password-label">Password <i>* Required</i></span><br>
+                        <input name="password" type="password" id="password" class="register__password" required><br>
+                        <div class="msg_password"></div>
+                    </label>
+                    <button type="submit" class="register__submit">Login</button>
+                </form>
+            </dialog>
+            <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+                <img src="menu.svg" alt="Menu icon">
+                <span class="menu-text">Menu</span>
+            </button>
+        </div>
+    </nav>
+
+<main class="main-content">
+  <section class="intro">
+    <h2>Why Cats are Amazing!</h2>
+    <p>Cats are one of the most beloved pets worldwide. They are independent, playful, and incredibly graceful. In this section, we will explore fascinating facts about these amazing creatures!</p>
+</section>
+
+<section class="flashcard-container">
+    <div class="flashcard">
+        <div class="flashcard__front">
+            <h3>What is the average lifespan of a cat?</h3>
+        </div>
+        <div class="flashcard__back">
+            <h3>Answer:</h3>
+            <p>The average lifespan is around 12-16 years! (max:20)</p>
+        </div>
+    </div>
+    <div class="flashcard">
+        <div class="flashcard__front">
+            <h3>How many bones do cats have?</h3>
+        </div>
+        <div class="flashcard__back">
+            <h3>Answer:</h3>
+            <p>About 230-250 bones (depending on tail)!</p>
+        </div>
+    </div>
+</section>
+
+<section class="interactive">
+  <a href="fun-facts.html" id="revealFact" class="reveal-fact-link">Reveal a Fun Fact!</a>
+    <p id="fact" class="fun-fact">Click the button to discover an amazing cat fact!</p>
+</section>
+</main>
+
+<footer>
+  This is where the uninteresting text goes. I mean, more interesting than this, but less interesting than the rest of the page.
+</footer>
+
+<script src="scripts.js"></script>
+
+</body>
+</html>

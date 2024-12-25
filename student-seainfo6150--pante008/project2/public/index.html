@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cats Power the Internet</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>body {
+  font-family: Arial, sans-serif;
+  background-color: #f5deb3;
+  margin: 0;
+}
+
+.skip-link {
+  position: absolute;
+  left: -1000px;
+  top: -1000px;
+  z-index: 999;
+  color: #000;
+  padding: 8px;
+  align-items: center;
+}
+.skip-link:focus {
+  top: 10px;
+  left: 50%;
+}
+
+/* Header Styles */
+header {
+  background-color: #d2b48c;
+  padding: 10px 0;
+  transition: background-color 0.5s ease; 
+}
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.logo-title {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  flex-grow: 1;
+  padding-left: 50px;
+}
+
+/* Navigation Links */
+.nav-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  justify-items: center;
+  margin-top: 10px;
+}
+.nav-link {
+  text-decoration: underline;
+  color: purple;
+  padding: 8px;
+  border-radius: 4px;
+  transition: color 0.3s, background-color 0.3s;
+}
+.nav-link:hover {
+  background-color: lightskyblue;
+  color: white;
+}
+.nav-link:active {
+  color: red;
+}
+
+/* Dropdown Menu for Mobile */
+.dropdown {
+  display: none;
+}
+.hamburger {
+  font-size: 30px;
+  cursor: pointer;
+}
+.dropdown-content {
+  display: none;
+  position: static;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+.dropdown.active .dropdown-content {
+  display: block;
+}
+.dropdown-content a {
+  color: purple;
+  padding: 12px 16px;
+  text-decoration: underline;
+  display: block;
+  text-align: left;
+  padding-left: 10px;
+}
+
+/* Card Container */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.5rem;
+  padding: 20px;
+}
+.cat-card, .content-box {
+  background-color: #d3d3d3;
+  border: 1px solid black;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.cat-card {
+  width: 22rem;
+  height: 20rem;
+  margin-bottom: 2.2rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.cat-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.cat-card img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.cat-card h2, .content-box h2 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+.cat-card p {
+  flex-grow: 1;
+  font-size: 0.9em;
+  color: #555;
+}
+.subscribe-link {
+  display: inline-block;
+  text-decoration: underline;
+  color: #0066cc;
+  font-weight: bold;
+}
+
+/* Content Layout for Desktop */
+.content {
+  display: flex;
+  align-items: center;
+}
+.content img {
+  width: 125px;
+  height: 125px;
+  float: left;
+  margin-right: 15px;
+}
+.content img.card-image2 {
+  float: right;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #d2b48c;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 20px;
+  justify-items: left;
+}
+.footer-grid a {
+  text-decoration: underline;
+  color: purple;
+  padding: 8px;
+  border-radius: 4px;
+}
+.footer-grid a:focus {
+  outline: 2px solid blue;
+}
+
+/* Modal Styling */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.3s, transform 0.3s;
+}
+.modal.show {
+  display: flex;
+  opacity: 1;
+  transform: scale(1);
+}
+.modal-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 5px;
+  max-width: 500px;
+  width: 100%;
+  position: relative;
+}
+.modal-content input {
+  width: 100%;
+  box-sizing: border-box;
+}
+.error-message {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 4px;
+}
+
+/* Accessibility Focus */
+.nav-link:focus {
+  outline: 2px solid rgb(99, 239, 255);
+}
+
+/* Button Styling */
+.button-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+.submit-btn, .cancel-btn {
+  color: black;
+  border: none;
+  padding: 5px 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 45%;
+}
+.submit-btn {
+  background-color: green;
+}
+.cancel-btn {
+  background-color: red;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  .nav-grid {
+    display: none;
+  }
+  .dropdown {
+    display: inline-block;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+    padding: 10px;
+    height: 160px;
+  }
+  .content {
+    display: inline;
+  }
+  .card-container {
+    grid-template-columns: 1fr;
+    gap: 1px;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  header, .dropdown-content, .nav-link:hover, .modal {
+    transition: none;
+  }
+}
+
+    </style>
+</head>
+<body>
+    
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <header>
+        <div class="header-content">
+            <div class="logo-title">
+                <a href="index.html" aria-label="Home"><img src="Logo.jpg" alt="Logo" class="logo"></a>
+                <h1>Cats Power the Internet</h1>
+            </div>
+
+            <div class="dropdown">
+                <span class="hamburger" onclick="toggleDropdown()" aria-label="Toggle navigation menu">&#9776;</span>
+                <div class="dropdown-content" aria-hidden="true">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="cats.html" class="nav-link">Famous Cats</a>
+                    <a href="cat-events.html" class="nav-link">Cat Events</a>
+                </div>
+            </div>
+        </div>
+
+        <nav>
+            <div class="nav-grid">
+                <a href="index.html" class="nav-link" aria-label="Navigate to Home">Home</a>
+                <a href="cats.html" class="nav-link" aria-label="Navigate to Famous Cats">Famous Cats</a>
+                <a href="cat-events.html" class="nav-link" aria-label="Navigate to Cat Events">Cat Events</a>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        
+        <section class="content-box">
+            <h2>Long time Internet Subjects</h2>
+            <div class="content">
+                <p>Adipisicing obcaecati praesentium repellendus a iusto debitis nesciunt eius laborum nostrum illo. Elit necessitatibus inventore sed aliquid magnam eos velit nisi ea distinctio itaque suscipit animi voluptate. Elit quas similique pariatur eaque adipisciing enim delectus neque rerum sed nobis dolor suscipit nulla?</p>
+                <img src="Panel.jpg" alt="Kittens" class="card-image1">
+            </div>
+        </section>
+    
+        <section class="content-box">
+            <h2>Long Time Internet Kings</h2>
+            <div class="content">
+                <img src="card.jpg" alt="Kitten in snow" class="card-image2">
+                <p>Elit quaerat ut quibusdam iure qui quibusdam beatae praesentium quaerat aut labore debitis, possimus veniam quod ab recusandae eos inventore. Amet nisi illo unde eligendi nemo. Libero laboriosam quaerat accusamus incidunt at. Pariatur nesciunt praesentium unde dolore assumenda. Ipsum fuga recusandae quae nesciunt nisi? Magnam maiores natus a magni iure.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <a href="privacy.html" aria-label="Privacy Policy">Privacy Policy</a>
+            <a href="careers.html" aria-label="Work for Us">Work for Us</a>
+            <a href="contact.html" aria-label="Contact Us">Contact Us</a>
+            <a href="social.html" aria-label="Social Media">Social Media</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

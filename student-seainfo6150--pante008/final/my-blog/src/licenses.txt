@@ -1,0 +1,62 @@
+
+1) Image:  logo.png
+Source: https://unsplash.com/photos/person-holding-blue-ceramic-mug-and-white-magazine-jkDLNDGougw
+
+2) Image: instagram_logo.png
+Source: https://unsplash.com/photos/icon-UsIAsUuR744
+Photographer: Mariia Shalabaieva
+
+3) Image: profile.jpg
+Source: Self-clicked
+
+4) Image: Library.jpg
+Source: https://unsplash.com/photos/assorted-title-of-books-piled-in-the-shelves-NIJuEQw0RKg
+
+5) Image: Blog.jpg
+Source: https://unsplash.com/photos/red-and-purple-coloring-pencils-on-pink-journal-y7GlIdTUOvo
+
+6) Image: Location.png
+Source: https://fonts.google.com/icons?icon.query=location&selected=Material+Symbols+Outlined:location_on:FILL@0;wght@400;GRAD@0;opsz@20&icon.size=2&icon.color=%23000000
+
+7)Image: Phone.png
+Source: https://fonts.google.com/icons?icon.query=phone&selected=Material+Symbols+Outlined:call:FILL@0;wght@400;GRAD@0;opsz@20&icon.size=2&icon.color=%23000000
+
+8) Image: email.png
+Source: https://fonts.google.com/icons?icon.query=email+&selected=Material+Symbols+Outlined:mark_email_unread:FILL@0;wght@400;GRAD@0;opsz@20&icon.size=2&icon.color=%23000000
+
+License: 
+
+Unsplash License (https://unsplash.com/license)  
+- Unsplash grants an irrevocable, nonexclusive, worldwide copyright license to:
+     a) Download
+     b) Copy
+     c) Modify
+     d) Distribute
+     e) Perform
+     f) Use the image
+
+Description: This license allows free use of the image for personal and commercial projects without the need for explicit permission, provided the photo is not sold as is or used to promote harmful activities. Attribution is appreciated but not required. This license does not guarantee absolute freedom from potential third-party claims. To be used at your own discretion
+
+
+-Material Symbols License (https://fonts.google.com/icons)
+
+Google grants an irrevocable, nonexclusive, worldwide license to:
+a) Download
+b) Copy
+c) Modify
+d) Use the icons
+
+Description:
+The Material Symbols can be freely used in personal and commercial projects under the Apache License 2.0. This includes:
+
+Personal Use: Incorporation into personal projects.
+Commercial Use: Usage in commercial designs, apps, and interfaces.
+Key Restrictions:
+Redistribution: Icons may not be sold, sublicensed, or distributed as standalone assets.
+Attribution: Attribution is not mandatory but is encouraged where feasible.
+Modification: You are free to modify the icons to suit your project needs while adhering to the license terms.
+Disclaimer: This license does not absolve users from potential claims by third parties. It is the user’s responsibility to ensure compliance with all applicable laws and use the assets responsibly.
+
+
+Usage: Included in the "Holistic Living" App for educational and non-commercial purposes.
+

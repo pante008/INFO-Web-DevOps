@@ -1,0 +1,19 @@
+image1.jpg: 
+Image Source - https://images.unsplash.com/photo-1518791841217-8f162f1e1131?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGNhdHN8ZW58MHx8MHx8fDA%3D
+
+
+image2.jpg : 
+Image Source- https://images.unsplash.com/photo-1536589961747-e239b2abbec2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Y2F0c3xlbnwwfHwwfHx8MA%3D%3D  
+
+License: Unsplash License (https://unsplash.com/license)  
+- Unsplash grants an irrevocable, nonexclusive, worldwide copyright license to:
+     a) Download
+     b) Copy
+     c) Modify
+     d) Distribute
+     e) Perform
+     f) Use the image
+
+Description: This license allows free use of the image for personal and commercial projects without the need for explicit permission, provided the photo is not sold as is or used to promote harmful activities. Attribution is appreciated but not required. This license does not guarantee absolute freedom from potential third-party claims. To be used at your own discretion
+
+Usage: Included in the "The Cat: An Interesting Animal" project for educational and non-commercial purposes.

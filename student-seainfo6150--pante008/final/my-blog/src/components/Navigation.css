@@ -1,0 +1,179 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+
+  background-color: palevioletred;
+  color: black;
+}
+
+.header h1 {
+  margin: 0;
+
+  font-size: 1rem;
+}
+
+.desktop-menu .nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.desktop-menu .nav-links li {
+  position: relative;
+}
+
+.desktop-menu .nav-links button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+
+  font-size: 1rem;
+
+  color: black;
+}
+
+.desktop-menu .nav-links button:hover {
+  color: white; 
+}
+
+.dropdown:hover .dropdown-links {
+  display: block;
+}
+
+.dropdown-btn {
+  padding: 0.5rem 1rem;
+
+  font-size: 1rem;
+}
+
+.dropdown-links {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 0.5rem 0;
+  width: 200px;
+  list-style: none;
+  z-index: 100;
+
+  background-color: palevioletred;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-links li {
+  padding: 0.5rem 1rem;
+}
+
+.dropdown-links li button {
+  background: none;
+  border: none;
+  width: 100%;
+  padding: 0.5rem;
+
+  text-align: left;
+
+  color: white;
+}
+
+.dropdown-links li button:hover {
+  background-color: #444;
+}
+
+.dropdown.open .dropdown-links {
+  display: block;
+}
+
+.hamburger-menu {
+  display: none;
+  position: relative;
+}
+
+.hamburger-icon {
+  font-size: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 101;
+
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .desktop-menu {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  .hamburger-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    border-radius: 5px;
+    z-index: 100;
+
+    background-color: palevioletred;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .hamburger-links li {
+    border-bottom: 1px solid #444;
+  }
+
+  .hamburger-links li:last-child {
+    border-bottom: none;
+  }
+
+  .hamburger-links button {
+    padding: 15px;
+    width: 100%;
+    background: none;
+    border: none;
+
+    text-align: left;
+    font-size: 1rem;
+
+    color: white;
+  }
+
+  .hamburger-links button:hover {
+    background-color: #444;
+  }
+
+  .hamburger-icon {
+    left: 10px;
+  }
+
+  .dropdown-links {
+    position: relative;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .desktop-menu .nav-links button:hover {
+    color: white; 
+  }
+
+  .dropdown-links li button:hover {
+    background-color: transparent;
+  }
+
+  .hamburger-links button:hover {
+    background-color: transparent; 
+}
+}

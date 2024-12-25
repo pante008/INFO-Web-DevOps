@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Dog's World</title>
+    <style>
+        
+        :root {
+          --primary-color: white;
+          --navbar-menu-color: #34495E;
+          --header-footer-background-color: #2C3E50;
+          --card-border-color: #ccc;
+          --card-background-color: #fff;
+          --body-background-color: #f4f4f4;
+          --card-link-color: #2980B9;
+          --header-more-infromation-background-color: #ECF0F1;
+          --more-information-text-color: #2C3E50;
+          --border-bottom-color: #E74C3C;
+          --button-color: #4CAF50;
+          --button-hover-color: #45a049;
+        }
+
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+
+        body {
+          font-family: Arial, sans-serif;
+          line-height: 1.6;
+
+          color: var(--secondary-color);
+          background-color: var(--body-background-color);
+        }
+
+        header {
+          margin-bottom: 30px;
+          padding: 1.5rem;
+
+          text-align: center;
+
+          background-color: var(--header-footer-background-color);
+          color: var(--primary-color);
+          border-bottom: 4px solid var(--border-bottom-color);
+        }
+
+        header h1 {
+          font-size: 2.5rem;
+          margin-bottom: 0.5rem;
+        }
+
+        header p {
+          font-size: 1.2rem;
+
+          color: var(--header-more-infromation-background-color);
+        }
+
+        .logo-image {
+          margin: 20px 0;
+          width: 120px;
+          height: auto;
+        }
+
+        .navbar {
+          padding: 10px;
+
+          background-color: var(--navbar-menu-color);
+        }
+
+        .nav-menu {
+          list-style: none;
+          display: flex;
+          justify-content: center;
+        }
+
+        .nav-item {
+          position: relative;
+        }
+
+        .nav-link {
+          padding: 10px 20px;
+          display: block;
+
+          text-decoration: none;
+          
+          color: var(--primary-color);
+          transition: background-color 0.3s ease;
+        }
+
+        .nav-link:hover {
+          background-color: var(--border-bottom-color);
+        }
+
+        .dropdown-menu {
+          position: absolute;
+          margin-top: 10px;
+
+          background-color: var(--navbar-menu-color); 
+          border: 1px solid var(--border-bottom-color);
+
+          list-style: none;
+          opacity: 0;
+          visibility: hidden;
+          transition: opacity 0.5s ease, visibility 1s ease;
+        }
+
+        .dropdown-menu li a {
+          padding: 10px;
+          display: block;
+
+          color: var(--primary-color);
+
+          text-decoration: none;
+        }
+
+        .dropdown-menu li a:hover {
+          background-color: var(--border-bottom-color);
+        }
+
+        .nav-item:hover .dropdown-menu {
+          opacity: 1;
+          visibility: visible;
+        }
+
+        .grid-container {
+          display: grid;
+          gap: 20px;
+          grid-template-columns: repeat(12, 1fr);
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 20px;
+        }
+
+        main h2 {
+          margin-bottom: 20px;
+
+          text-align: center;
+          font-size: 2rem;
+
+          color: var(--header-footer-background-color);
+        }
+
+        .card {
+          padding: 20px;
+          border-radius: 8px;
+
+          background-color: var(--card-background-color);
+          border: 1px solid var(--card-border-color);
+
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          transition: box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h3 {
+          margin-bottom: 10px;
+
+          font-size: 1.5rem;
+        }
+
+        .card p {
+          margin-bottom: 15px;
+
+          font-size: 1rem;
+        }
+
+        .card a {
+          text-decoration: none;
+          font-weight: bold;
+
+          color: var(--card-link-color);
+        }
+
+        .card a:hover {
+          text-decoration: underline;
+        }
+
+        .click-button {
+          padding: 10px 20px;
+          border: none;
+          border-radius: 5px;
+          font-size: 1rem;
+          cursor: pointer;
+          align-items: flex-end;
+
+          background-color: var(--button-color);
+          color: var(--primary-color);
+
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          transition: box-shadow 0.3s ease, background-color 0.3s ease;
+        }
+
+        .click-button:hover {
+          background-color: var(--button-hover-color);
+          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .news-dogs {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        
+        .historical-dogs {
+          grid-template-columns: repeat(4, 1fr);
+        }
+
+        .card-rescue-dog {
+        background-color: #FFDDC1; 
+        }
+
+        .card-new-dog-park {
+        background-color: #CFFFE5; 
+        }
+
+        .card-therapy-dogs {
+        background-color: #B0E0E6; 
+        }
+
+        .card-laika {
+        background-color: #FFD700; 
+        }
+
+        .card-hachiko {
+        background-color: #FFB6C1; 
+        }
+
+        .card-balto {
+        background-color: #ADD8E6; 
+        }
+
+        .card-rin-tin-tin {
+        background-color: #DDA0DD; 
+        }
+
+        .more-about-dogs {
+          padding: 40px;
+          margin-top: 40px;
+
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          border-top: 4px solid var(--border-bottom-color);
+          background-color: var(--header-more-infromation-background-color);
+        }
+
+        .more-about-dogs h2 {   
+          margin-bottom: 20px;
+          
+          text-align: center;
+          font-size: 2rem;
+          
+          color: var(--more-information-text-color)
+        }
+
+        .more-about-dogs p {
+          margin-bottom: 20px;
+
+          text-align: center;
+          font-size: 1.2rem;
+        }
+
+        footer {
+          padding: 20px 0;
+          margin-top: 40px;
+
+          text-align: center;
+
+          background-color: var(--header-footer-background-color);
+          color: var(--primary-color);
+        }
+
+        footer p {
+          margin-bottom: 0;
+        }
+
+        @media (max-width: 800px) {
+          .news-dogs {
+            grid-template-columns: 1fr;
+          }
+
+          .historical-dogs {
+            grid-template-columns: 1fr;
+          }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Home - Dog's World</h1>
+        <p>Exploring amazing facts and stories about dogs</p>
+        <a href="index.html" aria-label="Home"><img src="photo.avif" alt="Logo to World of Dogs which is an image of a running dog" class="logo-image"></a>
+        <nav class="navbar" role="navigation aria-label="Main Navigation">
+            <ul class="nav-menu">
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link" aria-haspopup="true" aria-expanded="false">Menu</a>
+                    <ul class="dropdown-menu" role="menu" aria-label="Dropdown Menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="register.html">Register</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link" aria-haspopup="true" aria-expanded="false">External Links</a>
+                    <ul class="dropdown-menu" role="menu" aria-label="Dropdown Menu">
+                        <li><a href="dogfeatures.html">Dog's Features</a></li>
+                        <li><a href="dogfoodhabits.html">Dog's Food Habits</a></li>
+                        <li><a href="dogbehavior.html">Dog's Behavior</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="cards-section">
+            <h2>Dogs in the News</h2>
+            <div class="grid-container news-dogs">
+              <div class="card-rescue-dog">
+                <h3>Rescue Dog Saves Family</h3>
+                <p>A dog saves its family from a burning house.</p>
+                <a href="readmorerescuedog.html" class="read-more-link" aria-label="Read more about Rescue Dog">Read more</a>
+              </div>
+              <div class="card-new-dog-park">
+                <h3>New Dog Park Opens</h3>
+                <p>A big dog park opens in downtown for all furry friends.</p>
+                <a href="readmorenewdogpark.html" class="read-more-link" aria-label="Read more about New Dog Park">Visit the park</a>
+              </div>
+              <div class="card-therapy-dogs">
+                <h3>Therapy Dogs Helping Children</h3>
+                <p>Dogs are making a difference in the lives of children</p>
+                <a href="readmoretherapydogs.html" class="read-more-link" aria-label="Read more about Therapy Dogs">Learn more</a>
+              </div>
+            </div>
+        </section>
+        
+        <section class="cards-section">
+            <h2>Famous Historical Dogs</h2>
+            <div class="grid-container historical-dogs">
+              <div class="card-laika">
+                <h3>Laika, the Space Dog</h3>
+                <p>First Dog to travel into Earth’s orbit aboard the Soviet spacecraft Sputnik 2.</p>
+                <a href="readmorelaika.html">Learn about Laika</a>
+              </div>
+              <div class="card-hachiko">
+                <h3>Hachiko's Loyalty</h3>
+                <p>A dog waited for years at the train station, hoping for his owner's return.</p>
+                <a href="readmorehachikosloyalty.html">Read about Hachiko</a>
+              </div>
+              <div class="card-balto">
+                <h3>Balto's Heroic Journey</h3>
+                <p>Balto delivers life saving medicine in Alaska by leading a team of sled dogs.</p>
+                <a href="readmorebaltoheroicjourney.html">Discover Balto's story</a>
+              </div>
+              <div class="card-rin-tin-tin">
+                <h3>Rin Tin Tin: Hollywood's Favorite Dog</h3>
+                <p>A German Shepherd became a movie star in the silent film era.</p>
+                <a href="readmorerintintin.html">Explore Rin Tin Tin's legacy</a>
+              </div>
+            </div>
+        </section>
+
+        <section class="more-about-dogs">
+            <h2>More About Dogs</h2>
+            <p>Interested in learning more about dog breeds, training, and how to care for your furry friend? Explore our upcoming resources!</p>
+            <button class="click-button">Learn More</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 All About Dogs</p>
+    </footer>
+</body>
+</html>
